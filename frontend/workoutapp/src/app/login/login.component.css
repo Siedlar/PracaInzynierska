@@ -5,6 +5,11 @@ body{
     width: 100%;
     background-attachment: fixed;
 }
+.col-md-6{
+
+    margin:auto;
+    margin-top: 150px;
+}
   .card-signin {
 
     border:5;
