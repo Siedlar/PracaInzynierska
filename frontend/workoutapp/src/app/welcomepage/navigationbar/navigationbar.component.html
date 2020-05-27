@@ -1,28 +1,36 @@
+<nav class="navbar navbar-light navbar-expand-lg bg-white fixed-top">
 
-<nav class="navbar fixed-top navbar-dark navbar-expand">
-<div class="container-fluid">
-    <!-- Links -->
-    <a class="navbar-brand" >Navbar</a>
-    <ul class="navbar-nav ml-auto">
-     
-    
-      <li class="nav-item ">
-        <a class="nav-link " href="#about" id="linki2">O nas</a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link"  id="linki2" href="#jakdziala">Jak działamy</a>
-      </li>
-      <li class="nav-item " >
-        <a class="nav-link" id="linki2" href="#dzialania">Galeria</a>
-      </li>
-       <li class="nav-item ">
-        <a class="nav-link" href="#opinie">Opinie</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login" routerLinkActive="active" role="button" id="linki">Login <i class="fa fa-sign-in" aria-hidden="true"></i> </a>
-      </li>
-    </ul>
-
-</div>
-  </nav>
-
+    <a class="navbar-brand" >
+      <i class="fas fa-dumbbell"></i>  GymNotation
+        </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav  mx-auto">
+        <li class="nav-item ">
+          <a class="nav-link text-dark" id="essa" href="#about"><i class="fa fa-home"></i> O nas
+                <span class="sr-only"></span>
+              </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark"  id="essa" href="#jakdziala"> <i class="fas fa-running"></i> Działanie</a>
+        </li>
+        <li class="nav-item " >
+          <a  class="nav-link text-dark" id="essa"  href="#dzialania">  <i class="fa fa-camera-retro"></i> Galeria</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark "  id="essa" href="#opinie"><i class="far fa-sticky-note"></i> Opinie</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav navbar-right-top">
+        <li class="nav-item">
+          <a class="nav-link font-size1 text-dark" routerLink="/login"><i class="fa fa-user"></i> Zaloguj się</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link font-size1 text-dark" routerLink="/zarejestruj"><i class="fas fa-sign-in-alt"></i> Zarejestruj się</a>
+        </li>
+      </ul>
+   
+  </div>
+</nav>

@@ -1,4 +1,118 @@
-.container-fluid{
-    height: 600px;
+section {
+    padding: 60px 0;
+  }
+  
+
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 30px;
+    color: #2f4d5a;
+    z-index: 2;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 122px;
+    height: 66px;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+  .about {
+    background: url("src/assets/about.jpg") center center no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
     scroll-snap-align: center;
-}
+  }
+  .about .container {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .about .content {
+    padding: 30px 30px 30px 0;
+  }
+
+  
+  .about .content h3 {
+    font-weight: 700;
+    font-size: 34px;
+    color: #2f4d5a;
+    margin-bottom: 30px;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+  }
+  
+  .about .content p {
+    margin-bottom: 30px;
+    font-size: 25px;
+  }
+  
+
+  
+  .about .content .about-btn i {
+    font-size: 18px;
+    position: absolute;
+    right: 18px;
+    top: 9px;
+  }
+  
+  .about .content .about-btn:hover {
+    background: #7bbad7;
+  }
+  .about .icon-boxes .icon-box {
+    margin-top: 30px;
+  }
+
+  .icon-box:hover{
+    background-color: white;
+    border: 1px solid black;
+  }
+  .about .icon-boxes .icon-box i {
+    font-size: 30px;
+    color: #2f4d5a;
+    margin-bottom: 10px;
+   
+  }
+  
+  .about .icon-boxes .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #2f4d5a;
+    border-bottom-width: 1px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+  }
+  
+  .about .icon-boxes .icon-box p {
+    font-size: 20px;
+    color: black;
+  }
+  
+  @media (max-width: 1200px) {
+    .about .content {
+      padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about {
+      text-align: center;
+    }
+  }

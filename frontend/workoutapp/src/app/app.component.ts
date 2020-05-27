@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {WelcomepageComponent} from 'src/app/welcomepage/welcomepage.component'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,5 +7,6 @@ import {WelcomepageComponent} from 'src/app/welcomepage/welcomepage.component'
 export class AppComponent {
 title="workoutapp"
    constructor(){}
- }
-
+ 
+ 
+}

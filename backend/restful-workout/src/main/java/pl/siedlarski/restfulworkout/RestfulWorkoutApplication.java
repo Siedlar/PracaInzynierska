@@ -8,6 +8,7 @@ public class RestfulWorkoutApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulWorkoutApplication.class, args);
-	}
 
+
+	}
 }

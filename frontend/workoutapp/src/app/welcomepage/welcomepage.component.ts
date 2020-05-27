@@ -10,6 +10,17 @@ export class WelcomepageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', this.scrollEvent, true);
   }
+  show:boolean=false;
+toTop(){
+  document.getElementById("about").scrollIntoView();
+}
+scrollEvent = (event: any): void => {
+  
+  this. show=true;
+ console.log("essa")
+
+}
 
 }

@@ -11,5 +11,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  storyPath = 'src/assets/logo.svg';
 }

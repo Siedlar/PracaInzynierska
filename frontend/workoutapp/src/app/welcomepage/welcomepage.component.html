@@ -1,8 +1,11 @@
 <body>
-<app-navigationbar></app-navigationbar>
-<app-header id="about"></app-header>
+    
+    <app-navigationbar></app-navigationbar>
+    
+<app-header   id="about"></app-header>
 <app-jakdziala id="jakdziala"></app-jakdziala>
 <app-dzialaniaaplikacji id="dzialania" ></app-dzialaniaaplikacji>
 <app-opinie id="opinie"></app-opinie>
 <app-footer></app-footer>
-</body>
+<button *ngIf="show"(click)="toTop()" id="myBtn">TOP</button>
+  </body>
