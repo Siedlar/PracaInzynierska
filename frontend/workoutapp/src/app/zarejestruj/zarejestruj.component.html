@@ -1,0 +1,47 @@
+
+<body>
+    <div class="container h-100  justify-content-center">
+      <div class="row h-100  ">
+        <div class="col-md-6  justify-content-center">
+          <div class="card card-signin">
+            <div class="card-body">
+              <h5 class="card-title text-center">Zarejestruj sie</h5>
+              <form [formGroup]="userForm" class="form-signin" (ngSubmit)="onSubmit()">
+                <div class="form-label-group">
+                    Imie:   <input  class="form-control"  formControlName="imie" name="imie"   [ngClass]="{ 'is-invalid': submitted && f.imie.errors }" >
+                    <div *ngIf="submitted && f.imie.errors?.required" class="invalid-feedback">
+                      Pole jest wymagane
+                  </div>
+                    </div>
+                    <div class="form-label-group">
+                        Nazwisko:   <input  class="form-control"  formControlName="nazwisko" name="nazwisko"   [ngClass]="{ 'is-invalid': submitted && f.nazwisko.errors }" >
+                        <div *ngIf="submitted && f.nazwisko.errors?.required" class="invalid-feedback">
+                          Pole jest wymagane
+                      </div>
+                        </div>
+                <div class="form-label-group">
+                Login:   <input  class="form-control"  name="username" formControlName="login"  [ngClass]="{ 'is-invalid': submitted && f.login.errors }">
+                <div *ngIf="submitted && f.login.errors?.required" class="invalid-feedback">
+                  Pole jest wymagane
+              </div>
+                </div>
+  
+                <div class="form-label-group">
+                 Hasło:  <input   type="password" class="form-control" formControlName="password"  name="password"    [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors?.required">Hasło jest wymagane</div>
+                  <div *ngIf="f.password.errors.minlength">Hasło musi mieć przynajmniej 6 znaków</div>
+              </div>
+                </div>
+  
+         
+      
+                <button class="btn btn-lg btn-primary btn-block text-uppercase"  type="submit"[ngClass]="{ 'is-invalid': submitted && f.imie.errors }" >Zarejestruj </button>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>

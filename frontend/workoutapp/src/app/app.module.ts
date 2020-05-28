@@ -23,6 +23,8 @@ import { NogiComponent } from './dashboard/cwiczenia/nogi/nogi.component';
 import { BicepsComponent } from './dashboard/cwiczenia/biceps/biceps.component';
 import { TricepsComponent } from './dashboard/cwiczenia/triceps/triceps.component';
 import { KontoComponent } from './dashboard/konto/konto.component';
+import { UserServiceService } from './service/user-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 const routes: Routes = [
   { path: '', component: WelcomepageComponent
  },
@@ -62,11 +64,11 @@ const routes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
-  
+    ReactiveFormsModule
     
   ],
  
-  providers: [],
+  providers: [UserServiceService],
   bootstrap: [AppComponent]
 })
 
