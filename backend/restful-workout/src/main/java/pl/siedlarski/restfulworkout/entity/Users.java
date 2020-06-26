@@ -41,6 +41,16 @@ public class Users {
 
     @OneToMany(mappedBy = "user" ,cascade =CascadeType.ALL,fetch=FetchType.LAZY)
     private List<Wymiary> listaWymiarow;
+    @OneToMany(mappedBy = "user" ,cascade =CascadeType.ALL,fetch=FetchType.LAZY)
+    private List<Plan> listaPlanow;
+
+    public List<Plan> getListaPlanow() {
+        return listaPlanow;
+    }
+
+    public void setListaPlanow(List<Plan> listaPlanow) {
+        this.listaPlanow = listaPlanow;
+    }
 
     public String getLogin() {
         return login;
