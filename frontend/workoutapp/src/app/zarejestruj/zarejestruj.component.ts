@@ -32,10 +32,11 @@ onSubmit(){
 }
 this.user=this.userForm.value;
   this.UserService.register(this.user).subscribe(data=>{
-    alert("Zostałeś pomyślne zarejestrowany w systemie, nastąpi przekierowanie do strony logowania!!!")
+    alert(data)
     this.router.navigate(['/login']);
   },error=>{
-    alert("Uzytkownik posiada juz taki login w systemie, zmien login")
+    alert('Uzytkownik o podanym loginie istnieje w bazie')
+   
     this.userForm.reset();
     this.submitted=false;
   })

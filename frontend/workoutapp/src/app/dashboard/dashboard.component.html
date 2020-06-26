@@ -19,7 +19,7 @@
                             <a class="nav-link " href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Konto <i class="fas fa-user"></i></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">{{ username}}</h5>
+                                    <h5 class="mb-0 text-white nav-user-name">{{username}}</h5>
                                 </div>
                                 <a class="dropdown-item" type="button" (click)="zmienKonto()"><i class="fas fa-user mr-2"></i>Konto</a>
                         
@@ -67,14 +67,9 @@
                                     <ul class="nav flex-column">
                                      
                                         <li class="nav-item">
-                                            <a class="nav-link" type="button">Zobacz historie treningow</a>
+                                            <a class="nav-link" type="button" (click)="zmienHistoria()" >Zobacz historie treningow</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" type="button">Suma treningow</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" type="button">Suma czasow treningu</a>
-                                        </li>
+                                     
                                     </ul>
                                 </div>
                             </li>
@@ -117,6 +112,23 @@
                                         <li class="nav-item">
                                             <a class="nav-link" type ="button"(click)="wyloguj()" >Wyloguj</a>
                                         </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-weight"></i>Pomiary</a>
+                                <div id="submenu-3" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" type ="button"(click)="zmienPomiar()" >Pomiary ciała</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" type ="button"(click)="zmienDodajPomiar()" >Dodaj pomiar</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" type ="button" (click)="zmienBMI()">Oblicz BMI</a>
+                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </li>
@@ -171,10 +183,21 @@
                             <div *ngIf="showNogi" class="container">
                                 <app-nogi></app-nogi>
                             </div>
-                            <div *ngIf="showKonto" class="container">
+                            <div *ngIf="showKonto" class="container pl-0 ml-0 my-2">
                                 <app-konto></app-konto>
                             </div>
-        
+                            <div *ngIf="showPomiar" class="container pl-0 ml-0 my-2">
+                                <app-pomiary></app-pomiary>
+                            </div>
+                            <div *ngIf="showHistoria" class="container pl-0 ml-0 my-2">
+                                <app-historiatreningow></app-historiatreningow>
+                            </div>
+                            <div *ngIf="showDodajPomiar" class="container pl-0 ml-0 my-2">
+                                <app-dodajpomiar></app-dodajpomiar>
+                            </div>
+                            <div *ngIf="showBMI" class="container pl-0 ml-0 my-2">
+                                <app-bmi></app-bmi>
+                            </div>
                             </div>
                         </div>
                     </div>

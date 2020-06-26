@@ -25,6 +25,11 @@ import { TricepsComponent } from './dashboard/cwiczenia/triceps/triceps.componen
 import { KontoComponent } from './dashboard/konto/konto.component';
 import { UserServiceService } from './service/user-service.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PomiaryComponent } from './dashboard/pomiary/pomiary.component';
+import { DodajpomiarComponent } from './dashboard/dodajpomiar/dodajpomiar.component';
+import { AuthGuardService } from './service/auth-guard.service';
+import { HistoriatreningowComponent } from './dashboard/historiatreningow/historiatreningow.component';
+import { BmiComponent } from './dashboard/bmi/bmi.component';
 const routes: Routes = [
   { path: '', component: WelcomepageComponent
  },
@@ -32,9 +37,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   
   { path: 'zarejestruj', component: ZarejestrujComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent ,canActivate: [AuthGuardService]},
 
   { path: 'niepamietaszhasla', component: NiepamietaszhaslaComponent },
+  { path: '**', redirectTo: '' }
 ]
 @NgModule({
   declarations: [
@@ -58,6 +64,10 @@ const routes: Routes = [
     BicepsComponent,
     TricepsComponent,
     KontoComponent,
+    PomiaryComponent,
+    DodajpomiarComponent,
+    HistoriatreningowComponent,
+    BmiComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +78,7 @@ const routes: Routes = [
     
   ],
  
-  providers: [UserServiceService],
+  providers: [UserServiceService,AuthGuardService],
   bootstrap: [AppComponent]
 })
 

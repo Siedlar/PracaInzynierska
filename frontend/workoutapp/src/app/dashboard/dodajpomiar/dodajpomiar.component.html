@@ -1,0 +1,43 @@
+<div class="container mt-5 m-auto">
+<h2>Dodaj Pomiar</h2>
+
+            <form class="form-signin"  [formGroup]="userForm" (ngSubmit)="dodajPomiar()">
+                 <div>
+                Waga:   <input type="number" class="form-control"  name="username" formControlName="waga" >
+               
+              </div>
+              <div>
+                Wzrost:   <input type="number" class="form-control"  name="username" formControlName="wzrost" >
+               
+              </div>
+                <div >
+                    Klatka  <input   type="number" class="form-control" formControlName="klatka"  name="klatka"  >
+               
+                  </div>
+                  <div >
+                    Biceps <input   type="number" class="form-control" formControlName="biceps"  name="biceps"  >
+               
+                  </div>
+                  <div >
+                    Łydka <input   type="number" class="form-control" formControlName="lydka"  name="lydka"  >
+               
+                  </div>
+                  <div >
+                    Udo <input   type="number" class="form-control" formControlName="udo"  name="udo"  >
+               
+                  </div>
+                  <div >
+                    Talia <input   type="number" class="form-control" formControlName="talia"  name="talia"  >
+               
+                  </div>
+                  <div >
+                   Brzuch <input   type="number" class="form-control" formControlName="brzuch"  name="brzuch"  >
+               
+                  </div>
+                  <div >
+                    Data <input   type="date" class="form-control" formControlName="data"  name="brzuch"  >
+                
+                   </div>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase mt-3" type="submit">Wyslij Pomiar</button>
+            </form>
+          </div>

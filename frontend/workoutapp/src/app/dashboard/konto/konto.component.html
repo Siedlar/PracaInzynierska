@@ -1,18 +1,12 @@
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Imie</th>
-        <th scope="col">Nazwisko</th>
-        <th scope="col">Login</th>
-        <th scope="col">Haslo</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of users">
-        <td>{{ user.imie }}</td>
-        <td>{{ user.nazwisko }}</td>
-        <td>{{ user.login }}</td>
-        <td>{{ user.password}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container my-3  ml-3 ">
+   
+       <h2>Witaj ponownie {{user?.imie   }} <i class="far fa-smile"></i></h2> 
+       <hr>
+       <h3>Imię i Nazwisko: {{user?.imie}} {{user?.nazwisko}}</h3>
+        <h3>Opis: {{user?.opis}}</h3>
+        <h3>Data rejestracji: {{user?.data_rejestracji}}</h3>
+        <h3>Login: {{user?.login}}</h3>
+        <h3>Ostatnia waga: {{user?.listaWymiarow[0]?.waga}}</h3>
+        <h3>Wzrost: {{user?.listaWymiarow[0]?.wzrost}} </h3>
+      </div>
+  

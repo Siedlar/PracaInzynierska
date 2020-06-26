@@ -1,7 +1,11 @@
 package pl.siedlarski.restfulworkout.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -23,6 +27,18 @@ public class Users {
     private String password;
     @Column(name = "OPIS")
     private String opis;
+    @Column(name = "DATA_REJESTRACJI",insertable=false)
+
+     private Date data_rejestracji;
+
+    public Date getData_rejestracji() {
+        return data_rejestracji;
+    }
+
+    public void setData_rejestracji(Date data_rejestracji) {
+        this.data_rejestracji = data_rejestracji;
+    }
+
     @OneToMany(mappedBy = "user" ,cascade =CascadeType.ALL,fetch=FetchType.LAZY)
     private List<Wymiary> listaWymiarow;
 

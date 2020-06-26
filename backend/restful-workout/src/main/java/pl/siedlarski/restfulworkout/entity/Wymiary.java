@@ -17,6 +17,7 @@ public class Wymiary {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="uzytkownik_id")
     private Users user;
+    private int wzrost;
     private int udo;
     private int talia;
     private int lydka;
@@ -24,6 +25,14 @@ public class Wymiary {
     private int brzuch;
     private int biceps;
     public Wymiary() {
+    }
+
+    public int getWzrost() {
+        return wzrost;
+    }
+
+    public void setWzrost(int wzrost) {
+        this.wzrost = wzrost;
     }
 
     public int getUdo() {
@@ -101,5 +110,22 @@ public class Wymiary {
 
     public void setUser(Users user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Wymiary{" +
+                "ID_WYMIARY=" + ID_WYMIARY +
+                ", data=" + data +
+                ", waga=" + waga +
+                ", user=" + user +
+                ", wzrost=" + wzrost +
+                ", udo=" + udo +
+                ", talia=" + talia +
+                ", lydka=" + lydka +
+                ", klatka=" + klatka +
+                ", brzuch=" + brzuch +
+                ", biceps=" + biceps +
+                '}';
     }
 }

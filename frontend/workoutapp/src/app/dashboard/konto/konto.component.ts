@@ -8,16 +8,16 @@ import { UserServiceService } from 'src/app/service/user-service.service';
   styleUrls: ['./konto.component.css']
 })
 export class KontoComponent implements OnInit {
-
-  users: User[];
- 
   constructor(private userService: UserServiceService) {
   }
- 
-
+ user:User;
+waga:number;
+wzrost:number;
+bmi:number;
   ngOnInit() {
    
-    
-
-}
+    this.userService.getUser(sessionStorage.getItem("current_user")).subscribe(
+      data=>this.user=data
+    );
+    }
 }

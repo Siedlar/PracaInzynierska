@@ -1,0 +1,23 @@
+<div *ngIf="bmi_bool==true"class="container my-5 ml-3" >
+    <h3>Twój wzrost: {{user?.listaWymiarow[0]?.wzrost}}</h3>
+    <h3>Twoja waga: {{user?.listaWymiarow[0]?.waga}}</h3><hr>
+
+    <h2>Twoje BMI to: {{bmi}}</h2><br>
+    <hr>
+    <h4>Zakresy wartości BMI:<br><br>
+
+    <span style="color:#082E79">mniej niż 16 - wygłodzenie</span><br>
+    <span style="color:#4169E1"> 16 - 16.99 - wychudzenie</span><br>
+    <span style="color:#ACE1AF">17 - 18.49 - niedowaga</span><br>
+    <span style="color:#CDEBA7"> 18.5 - 24.99 - wartość prawidłowa</span><br>
+    <span style="color:yellow"> 25 - 29.99 - nadwaga</span><br>
+    <span style="color:#FDE456">30 - 34.99 - I stopień otyłości</span><br>
+    <span style="color:#CF2929">35 - 39.99 - II stopień otyłości</span><br>
+    <span style="color:#801818"> powyżej 40 - otyłość skrajna</span><br></h4><hr>
+    <div >
+     <h3>Twój stopień to: {{bmi_nazwa}} </h3>  
+    </div>
+</div>
+<div *ngIf="bmi_bool==false" class="container my-5 ml-3">
+    <h3> Nie posiadasz jeszcze pomiaru ciala</h3>
+</div>

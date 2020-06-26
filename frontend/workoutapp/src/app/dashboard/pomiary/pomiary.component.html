@@ -1,0 +1,31 @@
+<div class="container">
+<div class="tz-gallery">
+    <div class="row">
+
+        <div class="col-md-4" *ngFor="let wymiary of user?.listaWymiarow">
+            <div class="thumbnail">
+                <div class="caption">
+                <h3>Data: {{wymiary?.data}}</h3>
+                <h4 *ngIf="wymiary?.wzrost!=0"> Wzrost:{{wymiary?.wzrost}}</h4>
+                <h4 *ngIf="wymiary?.waga!=0"> Waga:{{wymiary?.waga}}</h4>
+                <h4 *ngIf="wymiary?.klatka!=0"> Klatka {{wymiary?.klatka}}</h4> 
+                <h4 *ngIf="wymiary?.biceps!=0"> Biceps:{{wymiary?.biceps}}</h4>
+                 <h4 *ngIf="wymiary?.lydka!=0">lydka:{{wymiary?.lydka}}</h4>
+                 <h4 *ngIf="wymiary?.udo!=0">Udo:{{wymiary?.udo}}</h4>
+                <h4 *ngIf="wymiary?.talia!=0">Talia:{{wymiary?.talia}}</h4>
+                 <h4 *ngIf="wymiary?.brzuch!=0">Brzuch:{{wymiary?.brzuch}}</h4>
+ 
+                </div>
+                <div class='title'>
+            
+                    <a class="delete" ><i (click)="usunpomiar(wymiary)" class="far fa-minus-square"></i></a>
+                </div>
+            </div>
+           
+            
+        </div>
+       
+        
+        </div>
+        </div>
+        </div>

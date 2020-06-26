@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import pl.siedlarski.restfulworkout.entity.Users;
 @Repository
 public interface UserRepository extends CrudRepository<Users, Integer> {
-
+Users findByLogin(String login);
 }
 
