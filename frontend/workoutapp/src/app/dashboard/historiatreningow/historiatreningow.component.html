@@ -1,1 +1,33 @@
-essa
+<div class="container">
+    <div class="tz-gallery">
+        <div class="row">
+            <div *ngIf="user?.listaPlanow.length==0">
+                <h2>Nie masz jeszcze zadnych treningow!!!</h2>
+            </div>
+            <div class="col-md-4" *ngFor="let plan of user?.listaPlanow " >
+                <div class="thumbnail">
+                    <div class="caption">
+                    <h3>Data: {{plan?.data}}</h3>
+                        <h4>Trening trwał : {{plan?.czas_trwania}} minut</h4>
+                        <h4 *ngFor="let cwiczenia of plan.listaCwiczen">Nazwa ćwiczenia: {{cwiczenia.nazwacwiczenia}}  <br>
+                           Ćwiczona partia ciała: {{cwiczenia?.czesc_ciala}}
+                       <h4 *ngFor="let jedno of cwiczenia.listaCwiczen">
+                      Seria:  {{jedno.seria}} Ciężar: {{jedno.ciezar}} Ilość Powtorzeń: {{jedno.powtorzenia}}
+                    
+                       </h4>
+                        </h4>
+                        <hr>
+                    </div>
+                    <div class='title'>
+                        <a class="delete" ><i (click)="usunpomiar(plan)" class="far fa-minus-square"></i></a>
+                    
+                    </div>
+                </div>
+               
+        
+            </div>
+           
+            
+            </div>
+            </div>
+            </div>

@@ -11,9 +11,7 @@ export class KontoComponent implements OnInit {
   constructor(private userService: UserServiceService) {
   }
  user:User;
-waga:number;
-wzrost:number;
-bmi:number;
+
   ngOnInit() {
    
     this.userService.getUser(sessionStorage.getItem("current_user")).subscribe(

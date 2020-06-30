@@ -25,6 +25,17 @@ public class Plan {
         return listaCwiczen;
     }
 
+    @Override
+    public String toString() {
+        return "Plan{" +
+                "plan_id=" + plan_id +
+                ", data=" + data +
+                ", czas_trwania=" + czas_trwania +
+                ", user=" + user +
+                ", listaCwiczen=" + listaCwiczen +
+                '}';
+    }
+
     public void setListaCwiczen(List<Cwiczenia> listaCwiczen) {
         this.listaCwiczen = listaCwiczen;
     }

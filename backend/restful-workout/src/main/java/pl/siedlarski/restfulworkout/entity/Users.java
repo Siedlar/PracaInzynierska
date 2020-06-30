@@ -120,7 +120,9 @@ public class Users {
                 ", login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 ", opis='" + opis + '\'' +
+                ", data_rejestracji=" + data_rejestracji +
                 ", listaWymiarow=" + listaWymiarow +
+                ", listaPlanow=" + listaPlanow +
                 '}';
     }
 }

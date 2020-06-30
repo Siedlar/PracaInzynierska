@@ -30,6 +30,9 @@ import { DodajpomiarComponent } from './dashboard/dodajpomiar/dodajpomiar.compon
 import { AuthGuardService } from './service/auth-guard.service';
 import { HistoriatreningowComponent } from './dashboard/historiatreningow/historiatreningow.component';
 import { BmiComponent } from './dashboard/bmi/bmi.component';
+import { DodajTreningComponent } from './dashboard/dodaj-trening/dodaj-trening.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
   { path: '', component: WelcomepageComponent
  },
@@ -68,13 +71,16 @@ const routes: Routes = [
     DodajpomiarComponent,
     HistoriatreningowComponent,
     BmiComponent,
+    DodajTreningComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgbModule
     
   ],
  

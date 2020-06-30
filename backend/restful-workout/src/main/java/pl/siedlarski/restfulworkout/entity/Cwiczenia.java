@@ -51,4 +51,15 @@ public class Cwiczenia {
     public void setCzesc_ciala(String czesc_ciala) {
         this.czesc_ciala = czesc_ciala;
     }
+
+    @Override
+    public String toString() {
+        return "Cwiczenia{" +
+                "cwiczenia_id=" + cwiczenia_id +
+                ", nazwacwiczenia='" + nazwacwiczenia + '\'' +
+                ", czesc_ciala='" + czesc_ciala + '\'' +
+                ", plan=" + plan +
+                ", listaCwiczen=" + listaCwiczen +
+                '}';
+    }
 }

@@ -1,0 +1,39 @@
+<div class="container mt-5 m-auto">
+    <h2>Dodaj Pomiar</h2>
+    
+                <form class="form-signin"  [formGroup]="userForm" >
+                      <div >
+                    <a *ngIf="showData">  Data treningu <input   type="date" class="form-control" formControlName="data"   [ngClass]="{ 'is-invalid': submitted && f.data.errors }"> </a >  
+                      
+                    </div>
+                       <div >
+                        <a *ngIf="showData">    Czas Trwania Treningu <input type="number" class="form-control" formControlName="czas_trwania"  [ngClass]="{ 'is-invalid': submitted && f.czas_trwania.errors }"></a>  
+                      
+                      </div>
+                         <button type="button" *ngIf="showData" class="btn btn-lg btn-primary btn-block text-uppercase mt-3" (click)="dodajPomiar()">
+                          Zatwierdz  </button>
+                        </form>
+                        <form class="form-signin"  [formGroup]="CwiczeniaForm" >
+                      <div *ngIf="showData2==true &&showData==false ">
+                        Nazwa ćwiczenia <input  type="text" class="form-control" formControlName="nazwacwiczenia"  [ngClass]="{ 'is-invalid': submitted && c.nazwacwiczenia.errors }" >
+                     
+                        
+                       </div>
+                       <div *ngIf="showData2==true  &&showData==false ">
+                        Część ciała: <input  type="text" class="form-control" formControlName="czesc_ciala"  [ngClass]="{ 'is-invalid': submitted && c.czesc_ciala.errors }" ></div>
+                        <button type="button" *ngIf="showData2==true  &&showData==false" class="btn btn-lg btn-primary btn-block text-uppercase mt-3"   (click)="dodajPomiar2()">
+                          Zatwierdz  </button>
+                      </form>
+                        <form class="form-signin"  [formGroup]="SeriaForm" >
+                        <div *ngIf="showData2==false && showData==false">
+                        Seria <input  type="number" class="form-control" formControlName="seria"  name="brzuch"  [ngClass]="{ 'is-invalid': submitted && d.seria.errors }" ></div>
+                        <div *ngIf="showData2==false && showData==false">
+                            Ciezar <input  type="number" class="form-control" formControlName="ciezar"  name="brzuch"   [ngClass]="{ 'is-invalid': submitted && d.ciezar.errors }"></div>
+                            <div *ngIf=" showData2==false && showData==false" >
+                            Ilość powtórzeń <input  type="number" class="form-control" formControlName="powtorzenia"  name="brzuch"  [ngClass]="{ 'is-invalid': submitted && d.powtorzenia.errors }" ></div>
+                            <button *ngIf=" showData2==false && showData==false" type="button" class="btn btn-lg btn-primary btn-block text-uppercase mt-3" (click)="dodajPomiar3()"> Zatwierdz
+                            </button>
+                           
+                  
+                </form>
+              </div>

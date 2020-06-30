@@ -34,7 +34,8 @@ showBrzuch: boolean = false;
 showPomiar:boolean=false;
 showHistoria:boolean=false;
 showDodajPomiar: boolean=false;
-showBMI: boolean=false;
+  showBMI: boolean = false;
+  showDodajTrening: boolean = false;
 zmienboolean(){
   this.showKonto=false;
   
@@ -48,7 +49,8 @@ zmienboolean(){
   this.showBrzuch = false;
   this.showHistoria=false;
   this.showDodajPomiar=false;
-  this.showBMI=false;
+  this.showBMI = false;
+  this.showDodajTrening = false;
 }
 zmienKonto(){
 this.zmienboolean();
@@ -113,4 +115,8 @@ zmienBMI(){
  
   
 }
+  zmienDodajTrening() { 
+    this.zmienboolean();
+    this.showDodajTrening=true;
+  }
 }

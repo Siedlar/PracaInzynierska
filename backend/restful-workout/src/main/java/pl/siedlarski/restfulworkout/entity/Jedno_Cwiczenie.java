@@ -15,6 +15,17 @@ public class Jedno_Cwiczenie {
     @JoinColumn(name="cwiczenia_id")
     private Cwiczenia cwiczenia;
 
+    @Override
+    public String toString() {
+        return "Jedno_Cwiczenie{" +
+                "id_jedno_cwiczenie=" + id_jedno_cwiczenie +
+                ", seria=" + seria +
+                ", ciezar=" + ciezar +
+                ", powtorzenia=" + powtorzenia +
+                ", cwiczenia=" + cwiczenia +
+                '}';
+    }
+
     public void setCwiczenia(Cwiczenia cwiczenia) {
         this.cwiczenia = cwiczenia;
     }

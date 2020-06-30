@@ -27,4 +27,10 @@ login(user:User){
   usunpomiar(id_wymiar: number) { 
     return this.http.delete('http://localhost:8080/users/usunWymiar/'+id_wymiar,{responseType: 'text'});
   }
+  usunplan(id_wymiar: number) { 
+    return this.http.delete('http://localhost:8080/users/usunPlan/'+id_wymiar,{responseType: 'text'});
+  }
+  wyslijplan(user: User) { 
+    return this.http.post('http://localhost:8080/users/dodajPlan',user,{responseType: 'text'})
+  }
 }

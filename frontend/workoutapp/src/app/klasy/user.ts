@@ -1,4 +1,5 @@
 import { Wymiary } from './wymiary';
+import { Plan } from './plan';
 
 export class User {
     uzytkownik_id: number;
@@ -9,5 +10,5 @@ export class User {
     imie: string;
     data_rejestracji:Date;
     listaWymiarow :Array<Wymiary>=new Array<Wymiary>();
-  
+    listaPlanow: Array<Plan>;
 }
